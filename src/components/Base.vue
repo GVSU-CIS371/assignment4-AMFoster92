@@ -1,8 +1,14 @@
 <template>
-  <div class="baseBeverage"></div>
+  <div class="baseBeverage" :style="{backgroundColor: base.color}"></div>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { BaseBeverageType } from "../types/beverage";
+type Props = {
+  base: BaseBeverageType;
+};
+defineProps<Props>();
+</script>
 
 <style scoped>
 .baseBeverage {
